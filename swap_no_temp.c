@@ -1,17 +1,21 @@
-// Inclusion de la bibliothèque standard pour les entrées/so// Inclusion de la bibliothèque standard pour les entrées/sorties
+// Inclusion des bibliothèques standard pour les entrées/sorties et les limites
 #include <stdio.h>
-#include <limits.h> // Pour les constantes comme LLONG_MAX
+#include <limits.h>
 
 // Fonction principale, point d'entrée du programme
 int main() {
-    // Déclaration des variables pour stocker les deux nombres (long long pour grandes valeurs)
+    // Déclaration des variables pour stocker les deux nombres
     long long a, b;
     
     // Lecture des deux nombres saisis par l'utilisateur
     printf("Entrez deux nombres : ");
-    scanf("%lld %lld", &a, &b);
+    if (scanf("%lld %lld", &a, &b) != 2) {
+        // Vérifie si la lecture a réussi (entrées valides)
+        printf("Erreur : veuillez entrer deux nombres entiers valides.\n");
+        return 1; // Termine le programme avec une erreur
+    }
     
-    // Vérification pour éviter un débordement potentiel dans l'algorithme arithmétique
+    // Vérification pour éviter un débordement dans l'algorithme arithmétique
     if (a > LLONG_MAX - b || a < LLONG_MIN + b) {
         printf("Erreur : les nombres sont trop grands pour être échangés sans débordement.\n");
         return 1; // Termine le programme avec une erreur
