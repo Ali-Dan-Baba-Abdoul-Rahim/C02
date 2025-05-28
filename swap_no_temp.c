@@ -2,17 +2,17 @@
 
 int main() {
     int a, b;
-    
-    // Lire l'entrée
+
+    // Lire les deux entiers
     scanf("%d %d", &a, &b);
-    
-    // Inverser avec XOR
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-    
-    // Afficher exactement comme demandé
-    printf("Après échange: a = %d, b = %d\n", a, b);
-    
+
+    // Échange sans variable temporaire
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    // Affichage du résultat
+    printf("Après échange: a = %d, b = %d", a, b);
+
     return 0;
 }
