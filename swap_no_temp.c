@@ -3,15 +3,15 @@
 int main() {
     int a, b;
     
-    // Lire deux nombres
+    // Lire l'entrée
     scanf("%d %d", &a, &b);
     
-    // Inverser sans variable temporaire
-    a = a + b;    // a contient la somme
-    b = a - b;    // b prend la valeur initiale de a
-    a = a - b;    // a prend la valeur initiale de b
+    // Inverser avec XOR
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
     
-    // Afficher le résultat
+    // Afficher exactement comme demandé
     printf("Après échange: a = %d, b = %d\n", a, b);
     
     return 0;
