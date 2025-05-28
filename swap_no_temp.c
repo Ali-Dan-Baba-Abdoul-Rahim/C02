@@ -1,33 +1,21 @@
-// Inclusion des bibliothèques standard pour les entrées/sorties et les limites
+// Inclusion de la bibliothèque standard pour les entrées/sorties
 #include <stdio.h>
-#include <limits.h>
 
 // Fonction principale, point d'entrée du programme
 int main() {
-    // Déclaration des variables pour stocker les deux nombres
-    long long a, b;
+    // Déclaration des variables pour les deux nombres
+    int a, b;
     
     // Lecture des deux nombres saisis par l'utilisateur
-    printf("Entrez deux nombres : ");
-    if (scanf("%lld %lld", &a, &b) != 2) {
-        // Vérifie si la lecture a réussi (entrées valides)
-        printf("Erreur : veuillez entrer deux nombres entiers valides.\n");
-        return 1; // Termine le programme avec une erreur
-    }
+    scanf("%d %d", &a, &b);
     
-    // Vérification pour éviter un débordement dans l'algorithme arithmétique
-    if (a > LLONG_MAX - b || a < LLONG_MIN + b) {
-        printf("Erreur : les nombres sont trop grands pour être échangés sans débordement.\n");
-        return 1; // Termine le programme avec une erreur
-    }
-    
-    // Échange des valeurs sans variable temporaire en utilisant des opérations arithmétiques
-    a = a + b; // a contient la somme de a et b
-    b = a - b; // b prend la valeur initiale de a (somme - b)
-    a = a - b; // a prend la valeur initiale de b (somme - nouveau b)
+    // Manipulation des variables pour échanger les valeurs sans temporaire
+    a = a + b; // Ajoute b à a : a contient la somme
+    b = a - b; // Soustrait b de la somme : b prend la valeur initiale de a
+    a = a - b; // Soustrait le nouveau b de la somme : a prend la valeur initiale de b
     
     // Affichage des valeurs après l'échange
-    printf("Après échange: a = %lld, b = %lld\n", a, b);
+    printf("Après échange: a = %d, b = %d\n", a, b);
     
     // Indique que le programme s'est terminé avec succès
     return 0;
