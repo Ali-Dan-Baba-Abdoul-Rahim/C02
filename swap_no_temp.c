@@ -9,10 +9,10 @@ int main() {
     // Lecture des deux nombres saisis par l'utilisateur
     scanf("%d %d", &a, &b);
     
-    // Échange des valeurs sans variable temporaire en utilisant l'opérateur XOR
-    a = a ^ b; // a contient a XOR b
-    b = a ^ b; // b prend la valeur initiale de a
-    a = a ^ b; // a prend la valeur initiale de b
+    // Échange des valeurs sans variable temporaire en utilisant des opérations arithmétiques
+    a = a + b; // a contient la somme de a et b
+    b = a - b; // b prend la valeur initiale de a (somme - b)
+    a = a - b; // a prend la valeur initiale de b (somme - nouveau b)
     
     // Affichage des valeurs après l'échange
     printf("Après échange: a = %d, b = %d\n", a, b);
