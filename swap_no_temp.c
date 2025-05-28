@@ -15,7 +15,7 @@ int main() {
     a = a - b; // Soustrait le nouveau b de la somme : a prend la valeur initiale de b
     
     // Affichage des valeurs après l'échange
-    printf("Après échange: a = %d, b = %d\n", a, b);
+    printf("a = %d, b = %d\n", a, b);
     
     // Indique que le programme s'est terminé avec succès
     return 0;
