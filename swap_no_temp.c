@@ -12,7 +12,7 @@ int main() {
     a = a - b;
     
     // Afficher exactement comme demandé, avec les décimales pour les réels
-    printf("Après échange: a = %f, b = %f\n", a, b);
+    printf("Après échange: a = %.10g, b = %.10g\n", a, b);
     
     return 0;
 }
