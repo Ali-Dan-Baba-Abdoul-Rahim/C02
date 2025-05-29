@@ -5,7 +5,6 @@ int main() {
 
     // Lire les deux nombres
     if (scanf("%d %d", &a, &b) != 2) {
-        printf("Erreur de saisie. Veuillez entrer deux nombres entiers.\n");
         return 1; // Sortie avec une erreur
     }
 
