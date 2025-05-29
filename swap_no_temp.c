@@ -7,9 +7,9 @@ int main() {
     scanf("%d %d", &a, &b);
     
     // Inverser avec logique arithmétique
-    a = a + b;    // a contient la somme
-    b = a - b;    // b prend la valeur initiale de a
-    a = a - b;    // a prend la valeur initiale de b
+    a = a * b;
+    b = a / b;  // b = a_initial
+    a = a / b;  // a = b_initial
     
     // Afficher exactement comme demandé
     printf("Après échange: a = %d, b = %d\n", a, b);
