@@ -1,19 +1,18 @@
 #include <stdio.h>
 
-int main() 
-{
+int main() {
     int a, b;
-
-    // Lire les deux entiers
+    
+    // Lire deux nombres
     scanf("%d %d", &a, &b);
-
-    // Échange sans variable temporaire
-    a = a + b;
-    b = a - b;
-    a = a - b;
-
-    // Affichage du résultat
+    
+    // Inverser avec logique arithmétique
+    a = a + b;    // a contient la somme
+    b = a - b;    // b prend la valeur initiale de a
+    a = a - b;    // a prend la valeur initiale de b
+    
+    // Afficher exactement comme demandé
     printf("Après échange: a = %d, b = %d\n", a, b);
-
+    
     return 0;
 }
